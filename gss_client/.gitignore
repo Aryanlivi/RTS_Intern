@@ -1,0 +1,62 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+.tmp/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Testing
+coverage/
+.nyc_output/
+jest-test-results.json
+
+# Debugging
+*.pid
+*.seed
+
+# Miscellaneous
+*.tgz
+*.bak
+*.tmp
+
+# TypeScript
+*.tsbuildinfo
+
+# Ignore the "public" folder if it's generated during the build process
+public/
+
+# Ignore local npm binaries
+.npm/
+
+# Ignore next.js output
+.next/
+
+# Ignore Nuxt.js output
+.nuxt/
