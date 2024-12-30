@@ -12,6 +12,6 @@ def fetch_data(series_id, start, end):
 #GalchiSeriesId=7027
 #SiurentarSeriesID=7009
 #chumlingatSeriesID=6991
-BudhiGandakiSeriesID=7045
-data = fetch_data(BudhiGandakiSeriesID, "2024-12-14:00:00", "2024-12-16T00:00:00")
-print(data)
+# BudhiGandakiSeriesID=7045
+# data = fetch_data(BudhiGandakiSeriesID, "2024-12-14:00:00", "2024-12-16T00:00:00")
+# print(data)
