@@ -1,5 +1,6 @@
-const axios = require('axios');
-require('dotenv').config(); 
+import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 // Base configuration
@@ -26,7 +27,8 @@ const ENDPOINTS = {
 const fetchData=async()=>{
     try{
         const response=await axiosInstance.get(ENDPOINTS.socketResponse)
-        console.log(response.data)
+        // console.log(response.data)
+        return response.data
     }
     catch(error){
         console.error('Error fetching data:', error.message);
@@ -69,11 +71,41 @@ const fetchStationDataSeries=async(stationId)=>{
 
 ////-------Obsercation -----------//
 
-const fetchObsDataSeries=async(seriesId,startDate,endDate)=>{
+const fetchSeriesId=async (item_name) => {
+        try {
+            const data = await fetchData(); // Assuming fetchData returns a Promise
+            
+            // console.log(data)
+            // Find the object with the name "galchi"
+            const seriesObject = data.find((item)=>{
+                if(item.name === item_name){
+                    return item
+                }
+            });
+            console.log(seriesObject)
+            // // Extract the series_id if it exists
+            let seriesId=null;
+            if (seriesObject){
+                seriesId=seriesObject.series_id
+            }
+    
+            if (seriesId) {
+                console.log(`Series ID for ${item_name}: ${seriesId}`);
+            } else {
+                console.log(`No series_id found for name ${item_name} .`);
+            }
+    
+            return seriesId; // Return the ID for further use
+        } catch (error) {
+            console.error("Error fetching or processing data:", error);
+        }
+    };
+
+export const fetchObsDataSeries=async(seriesId,startDate,endDate)=>{
     try{
         console.log(`Fetching point observation of data series with series_id=${seriesId} from ${startDate} to ${endDate}`)
         const response=await axiosInstance.get(ENDPOINTS.observationDataSeries(seriesId,startDate,endDate))
-        console.log(response.data)
+        return response.data.data
     }
     catch(error){
         console.error('Error fetching data:', error.message);
@@ -91,11 +123,20 @@ const fetchObsDataSeriesLatest= async(seriesId)=>{
     }
 }
 
-// fetchData()
+
 
 // fetchStationById(244)
 // fetchStationDataSeries(244)
+// seriesId=fetchSeriesId("Budhi Gandaki at Khari")
+// // GalchiSeriesId=7027
+// SiurentarSeriesID=7009
+// // chumlingatSeriesID=6991
+let BudhiGandakiSeriesID=7045
 
-waterlevelSeriesId=6868
-// fetchObsDataSeries(waterlevelSeriesId,'2024-12-10T00:00:00','2024-12-12T00:00:00')
-fetchObsDataSeriesLatest(waterlevelSeriesId)
+// let result=null
+fetchObsDataSeries(BudhiGandakiSeriesID,'2024-12-14:00:00','2024-12-16T00:00:00').then(data => {
+    console.log(data)
+}).catch(error => {
+    console.error(error);
+});
+// fetchObsDataSeriesLatest(waterlevelSeriesId)

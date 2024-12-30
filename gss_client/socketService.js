@@ -1,12 +1,15 @@
-const io=require('socket.io-client')
-require('dotenv').config(); 
+import socketIOClient from 'socket.io-client';
+
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const BASE_URL = process.env.BASE_URL //this is socketV2
 const SOCKET_NAMESPACE = process.env.SOCKET_NAMESPACE ; //currently 'river_test' or 'temperature'
 
 // connecting to a Socket.IO server
-const socket_gss = io(BASE_URL);
+const socket_gss = socketIOClient(BASE_URL);
 
 socket_gss.on('connect', () => {
     console.log('Socket connected:', socket_gss.connected);
