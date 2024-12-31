@@ -1,6 +1,8 @@
 from decimal import Decimal
 import numpy as np
-import math
+import math 
+
+
 def calculate_discharge_galchi(water_level):
     water_level=Decimal(str(water_level))
     a=Decimal(174.033420951409)
@@ -19,7 +21,10 @@ def calculate_discharge_budhi(water_level):
     water_level=Decimal(str(water_level))
     a=Decimal(417.1536)
     b=Decimal(0.36303508)
-    c=Decimal(333.56)
+    # c=Decimal(333.56)
+    
+    #After 12/31/2024:
+    c=Decimal(333.40)
     difference = water_level - c
     power= difference**b
     discharge= a*power
@@ -29,9 +34,13 @@ def calculate_discharge_budhi(water_level):
 def calculate_discharge_suirenitar(water_level):
     water_level=Decimal(str(water_level))
     a=Decimal(657.5618)
-    # b=Decimal(0.46969843)
-    b=Decimal(0.65)
-    c=Decimal(280.12)
+    # b=Decimal(0.65)
+    # c=Decimal(280.12)
+    
+    # #for test
+    b=Decimal(0.57)
+    # #for test purpose put c=279.0
+    c=Decimal(279.00)
     difference = water_level - c
     power= difference**b
     discharge= a*power
