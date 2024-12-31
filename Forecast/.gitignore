@@ -1,3 +1,4 @@
 rts_env/
 __pycache__/
 /Dataset/
+.env

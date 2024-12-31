@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from decimal import Decimal
 from Utils import  *
-from FetchLatestData import fetch_water_level_data
+from ApiService import fetch_water_level_data
 import time
 
 DISTANCE_GALCHI_SUIRENITAR=30000
@@ -87,7 +87,7 @@ def main():
         budhi_df=fetch_water_level_data(SocketBudhiId)
         budhi_df=pd.DataFrame([budhi_df])
         # print(galchi_df)
-        full_task_pipeline(galchi_df,budhi_df)
+        print(full_task_pipeline(galchi_df,budhi_df))
         #10 min before next fetch
         time.sleep(600) 
     
