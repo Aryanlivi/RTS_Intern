@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-token = os.getenv('token')
+
 
 
 def fetch_water_level_data(id):
@@ -19,26 +19,18 @@ def fetch_water_level_data(id):
         print(f"Error occurred while fetching data: {e}")
         return None
 
-
-# try:
-#     water_level_data = fetch_water_level_data(SocketSiurenitarId)
-#     print(water_level_data)
-# except Exception as e:
-#     print(e)
-
-
-
-def post_data_to_api(data):
-    url = 'https://your-api-endpoint.com/endpoint'
+def post_forecast(data):
+    baseURL=os.getenv('baseURL')
+    stationId=os.getenv('stationId')
+    metaData=os.getenv('metaData')
+    url = f'{baseURL}/#/station/{stationId}/meta-data?_k={metaData}'
+    token = os.getenv('token')
     headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_API_TOKEN'
-}
+    'Authorization': token
+    }
     try:
-        # Make the POST request
         response = requests.post(url, json=data, headers=headers)
-
-        # Check if the request was successful
         if response.status_code == 200:
             return response.json(), response.status_code, None
         else:
