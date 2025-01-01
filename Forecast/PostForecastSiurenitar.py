@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from decimal import Decimal
 from Utils import  *
-from ApiService import fetch_water_level_data
+from ApiService import fetch_water_level_data,post_forecast
 import time
 
 DISTANCE_GALCHI_SUIRENITAR=30000
@@ -73,22 +73,47 @@ def full_task_pipeline(galchi_df,budhi_df):
             merged_df.at[index, 'discharge'] = np.nan
     merged_df.reset_index(inplace=True)    
     computed_suirenitar_df=merged_df[['dateTime','discharge']]
-    json_result = computed_suirenitar_df.to_json(orient='records',date_format='iso')
+    try:
+        json_result = computed_suirenitar_df.to_json(orient='records', date_format='iso')
+        print("Generated JSON:")
+        print(json_result)
+    except Exception as e:
+        print(f"Error during JSON conversion: {e}")
+        return None
+
     return json_result
             
 
+def handle_post_to_api(data):
+    #POST DATA
+    response_data, status_code, error= post_forecast(data)
+    if status_code == 200:
+        print("Request was successful!")
+        print("Response Data:", data)
+    elif error:
+        print("An error occurred:", error)
+    else:
+        print(f"Request failed with status code: {status_code}")
+    #10 min before next fetch
 def main():
     #for test:
     # galchi_df=pd.DataFrame([{ 'datetime': '2024-12-31T10:45:00+00:00', 'value': 366.34 }])
     # budhi_df=pd.DataFrame([{ 'datetime': '2024-12-31T10:45:00+00:00', 'value': 334.45 }])
     while True:
-        galchi_df=fetch_water_level_data(SocketGalchiId)
-        galchi_df=pd.DataFrame([galchi_df])
-        budhi_df=fetch_water_level_data(SocketBudhiId)
-        budhi_df=pd.DataFrame([budhi_df])
-        # print(galchi_df)
-        print(full_task_pipeline(galchi_df,budhi_df))
-        #10 min before next fetch
+        galchi_data=fetch_water_level_data(SocketGalchiId)
+        galchi_df=pd.DataFrame([galchi_data])
+        budhi_data=fetch_water_level_data(SocketBudhiId)
+        budhi_df=pd.DataFrame([budhi_data])
+        
+        if not galchi_data or not budhi_data:  # Check for empty data
+            print("Received empty data, skipping processing.")
+            handle_post_to_api(-9999)
+            time.sleep(600)  # Sleep before the next fetch
+            continue
+        
+        data=full_task_pipeline(galchi_df,budhi_df)
+        handle_post_to_api(data)
+        
         time.sleep(600) 
     
 main()
