@@ -36,7 +36,7 @@ def post_forecast(data):
     try:
         response = requests.post(url, json=data, headers=headers)
         if response.status_code == 200:
-            print("Post Successfull")
+            print(f"Post Successful with response:{response.json()}")
             return response.json(), response.status_code, None
         else:
             return None, response.status_code, response.text

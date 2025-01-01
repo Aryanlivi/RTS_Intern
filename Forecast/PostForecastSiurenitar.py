@@ -140,6 +140,6 @@ def update_dataframe(data):
         return
     
     final_output=full_task_pipeline(galchi_df,budhi_df)
+    print(final_output)
     post_forecast(final_output)
-    
     print("------Updated DF----------")
