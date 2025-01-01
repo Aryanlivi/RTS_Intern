@@ -21,9 +21,13 @@ def fetch_water_level_data(id):
 
 def post_forecast(data):
     baseURL=os.getenv('baseURL')
-    stationId=os.getenv('stationId')
-    metaData=os.getenv('metaData')
-    url = f'{baseURL}/#/station/{stationId}/meta-data?_k={metaData}'
+    origin_code=os.getenv('origin_code')
+    parameter_code=os.getenv('parameter_code')
+    url = f'{baseURL}/import'
+    for item in data:
+        item['origin_code']=origin_code
+        item['parameter_code']=parameter_code
+        
     token = os.getenv('token')
     headers = {
     'Content-Type': 'application/json',
@@ -32,6 +36,7 @@ def post_forecast(data):
     try:
         response = requests.post(url, json=data, headers=headers)
         if response.status_code == 200:
+            print("Post Successfull")
             return response.json(), response.status_code, None
         else:
             return None, response.status_code, response.text

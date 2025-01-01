@@ -5,6 +5,7 @@ from decimal import Decimal
 from Utils import  *
 from ApiService import fetch_water_level_data,post_forecast
 import time
+import json 
 
 DISTANCE_GALCHI_SUIRENITAR=30000
 DISTANCE_BUDHI_SUIRENITAR=18500
@@ -73,10 +74,23 @@ def full_task_pipeline(galchi_df,budhi_df):
             merged_df.at[index, 'discharge'] = np.nan
     merged_df.reset_index(inplace=True)    
     computed_suirenitar_df=merged_df[['dateTime','discharge']]
+    print(merged_df)
+    # Rename columns first
+    computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
+
+    # Convert 'time' column to datetime
+    computed_suirenitar_df['time'] = pd.to_datetime(computed_suirenitar_df['time'])
+
+    # Convert to Nepali Time +5:45
+    computed_suirenitar_df['time'] = computed_suirenitar_df['time'] + pd.Timedelta(hours=5, minutes=45)
+
+    # Format the 'time' column to show only hour and minute
+    computed_suirenitar_df['time'] = computed_suirenitar_df['time'].dt.strftime('%Y-%m-%dT%H:%M')
+    
     try:
-        json_result = computed_suirenitar_df.to_json(orient='records', date_format='iso')
-        print("Generated JSON:")
-        print(json_result)
+        output = computed_suirenitar_df.to_json(orient='records', date_format='iso')
+        result = json.loads(output)
+        return result
     except Exception as e:
         print(f"Error during JSON conversion: {e}")
         return None
@@ -84,36 +98,48 @@ def full_task_pipeline(galchi_df,budhi_df):
     return json_result
             
 
-def handle_post_to_api(data):
-    #POST DATA
-    response_data, status_code, error= post_forecast(data)
-    if status_code == 200:
-        print("Request was successful!")
-        print("Response Data:", data)
-    elif error:
-        print("An error occurred:", error)
-    else:
-        print(f"Request failed with status code: {status_code}")
-    #10 min before next fetch
-def main():
-    #for test:
-    # galchi_df=pd.DataFrame([{ 'datetime': '2024-12-31T10:45:00+00:00', 'value': 366.34 }])
-    # budhi_df=pd.DataFrame([{ 'datetime': '2024-12-31T10:45:00+00:00', 'value': 334.45 }])
-    while True:
-        galchi_data=fetch_water_level_data(SocketGalchiId)
-        galchi_df=pd.DataFrame([galchi_data])
-        budhi_data=fetch_water_level_data(SocketBudhiId)
-        budhi_df=pd.DataFrame([budhi_data])
-        
-        if not galchi_data or not budhi_data:  # Check for empty data
-            print("Received empty data, skipping processing.")
-            handle_post_to_api(-9999)
-            time.sleep(600)  # Sleep before the next fetch
-            continue
-        
-        data=full_task_pipeline(galchi_df,budhi_df)
-        handle_post_to_api(data)
-        
-        time.sleep(600) 
+
+def update_galchi_data(data, id):
+    try:
+        if isinstance(data, list):
+            if not data:  # Check if the list is empty
+                return None  # Return None for empty data
+            for item in data:
+                if item.get('id') == id:
+                    return item.get('waterLevel', 'Water level not available')
+            return None 
+        else:
+            return 'Invalid data format received.'  
+
+    except Exception as error:
+        return f"Error: {error}"  
+
     
-main()
+def update_budhi_data(data, id):
+    try:
+        if isinstance(data, list):
+            if not data:  # Check if the list is empty
+                return None  # Return None for empty data
+            for item in data:
+                if item.get('id') == id:
+                    return item.get('waterLevel', 'Water level not available')
+            return None 
+        else:
+            return 'Invalid data format received.'  
+
+    except Exception as error:
+        return f"Error: {error}"   
+def update_dataframe(data):
+    galchi_data=update_galchi_data(data=data,id=SocketGalchiId)
+    budhi_data=update_budhi_data(data=data,id=SocketBudhiId)
+    
+    galchi_df=pd.DataFrame([galchi_data])
+    budhi_df=pd.DataFrame([budhi_data])
+        
+    if not galchi_data or not budhi_data:      
+        return
+    
+    final_output=full_task_pipeline(galchi_df,budhi_df)
+    post_forecast(final_output)
+    
+    print("------Updated DF----------")
