@@ -8,7 +8,7 @@ import json
 from dotenv import load_dotenv
 import os 
 from DB_Service.Database import Database
-
+from UpdateSuirenitar import update_suirenitar_table
 
 load_dotenv()
 
@@ -86,6 +86,15 @@ def get_merged_df(shifted_galchi_df,shifted_budhi_df):
 
 
 
+
+def get_latest_datetime(df1, df2):
+    try:
+        latest_datetime = max(df1['dateTime'].iloc[0], df2['dateTime'].iloc[0])
+        print(f"The latest datetime is: {latest_datetime}")
+        return latest_datetime
+    except Exception as e:
+        print(f"Error comparing datetimes: {e}")
+        return None
 def compute_discharge_and_forecast(galchi_df,budhi_df):
     shifted_galchi_df,shifted_budhi_df=get_shifted_df(galchi_df,budhi_df)
     
@@ -95,16 +104,10 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
     GALCHI_TABLE=os.getenv('galchi_table')
     BUDHI_TABLE=os.getenv('budhi_table')
     SIURENITAR_TABLE=os.getenv('siurenitar_table')
-    
-
-
 
     db.insert_df(shifted_galchi_df,GALCHI_TABLE)
     db.insert_df(shifted_budhi_df,BUDHI_TABLE)
-
-    # merged_df=get_merged_df(shifted_galchi_df,shifted_budhi_df)
-    # print(merged_df)
-    return None 
+    update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
     
     
     # computed_suirenitar_df=merged_df[['dateTime','discharge']]

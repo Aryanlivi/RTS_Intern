@@ -25,7 +25,7 @@ db.execute_query(f'''
 
     CREATE TABLE IF NOT EXISTS public.{siurenitar_table} (
         dateTime TIMESTAMP,
-        discharge_value FLOAT
+        discharge FLOAT
     );
 
 ''')
