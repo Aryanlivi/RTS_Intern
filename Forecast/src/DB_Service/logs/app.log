@@ -82,3 +82,102 @@
         );
 
 2025-01-02 15:01:10,602 - db_logger - INFO - Database connection closed.
+2025-01-02 15:22:22,837 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:22:22,844 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS public.Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS public.Budhi_at_Khari (
+            ForecasteddateTime TIMESTAMP,
+            discharge FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS public.Siurenitar (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+2025-01-02 15:22:22,846 - db_logger - INFO - Database connection closed.
+2025-01-02 15:26:51,522 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:26:51,529 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    ForecasteddateTime TIMESTAMP,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        ForecasteddateTime TIMESTAMP,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        ForecasteddateTime TIMESTAMP,
+        discharge_value FLOAT
+    );
+
+
+2025-01-02 15:26:51,531 - db_logger - INFO - Database connection closed.
+2025-01-02 15:27:17,414 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:27:17,422 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP,
+        discharge_value FLOAT
+    );
+
+
+2025-01-02 15:27:17,425 - db_logger - INFO - Database connection closed.
+2025-01-02 15:44:16,817 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:44:16,819 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP,
+        discharge_value FLOAT
+    );
+
+
+2025-01-02 15:44:16,821 - db_logger - INFO - Database connection closed.
+2025-01-02 15:44:58,323 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:46:59,168 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:47:10,344 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:47:28,034 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:48:47,944 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:50:45,857 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:52:31,857 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:52:54,817 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:55:05,771 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:55:28,044 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:56:39,032 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:57:05,123 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:57:45,990 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:59:30,573 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:01:04,632 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:01:23,211 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:01:43,615 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:02:52,393 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:03:59,380 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:04:44,051 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:18:04,482 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:18:14,773 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:18:26,355 - db_logger - INFO - Database connection established successfully.
+2025-01-02 16:20:03,959 - db_logger - INFO - Database connection established successfully.

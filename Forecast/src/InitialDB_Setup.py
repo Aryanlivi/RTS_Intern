@@ -1,26 +1,33 @@
 from DB_Service.Database import Database
+from dotenv import load_dotenv
 
+load_dotenv()
+
+galchi_table = 'Forecast_Galchi_To_Siurenitar'
+budhi_table = 'Forecast_Budhi_At_Khari_To_Siurenitar'
+siurenitar_table = 'Forecast_Siurenitar_Data'
 db = Database()
 
 
 db.connect()
 
 
-db.execute_query('''
-        CREATE TABLE IF NOT EXISTS public.Galchi (
-            ForecasteddateTime TIMESTAMP,
-            discharge_value FLOAT
-        );
+db.execute_query(f'''
+    CREATE TABLE IF NOT EXISTS public.{galchi_table} (
+    dateTime TIMESTAMP,
+    discharge FLOAT
+    );
 
-        CREATE TABLE IF NOT EXISTS public.Budhi_at_Khari (
-            ForecasteddateTime TIMESTAMP,
-            discharge_value FLOAT
-        );
+    CREATE TABLE IF NOT EXISTS public.{budhi_table} (
+        dateTime TIMESTAMP,
+        discharge FLOAT
+    );
 
-        CREATE TABLE IF NOT EXISTS public.Siurenitar (
-            ForecasteddateTime TIMESTAMP,
-            discharge_value FLOAT
-        );
+    CREATE TABLE IF NOT EXISTS public.{siurenitar_table} (
+        dateTime TIMESTAMP,
+        discharge_value FLOAT
+    );
+
 ''')
 
     
