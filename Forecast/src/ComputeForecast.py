@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from decimal import Decimal
 from Utils import  *
-from ApiService import fetch_water_level_data,post_forecast
 import time
 import json 
+from dotenv import load_dotenv
+import os 
 
+load_dotenv()
+
+#Distance
 DISTANCE_GALCHI_SUIRENITAR=30000
 DISTANCE_BUDHI_SUIRENITAR=18500
-
-SocketSiurenitarId=450
-SocketGalchiId=451
-SocketBudhiId=452
 
 def preprocess_data(df):   
     df['datetime']=pd.to_datetime(df['datetime'])
@@ -32,7 +32,7 @@ def create_shifted_df(df):
 
 
 
-def full_task_pipeline(galchi_df,budhi_df):
+def compute_discharge_and_forecast(galchi_df,budhi_df):
     galchi_df=preprocess_data(galchi_df)
     budhi_df=preprocess_data(budhi_df)
     # suirenitar_df=preprocess_data(suirenitar_df)    
@@ -101,54 +101,3 @@ def full_task_pipeline(galchi_df,budhi_df):
 
     return json_result
             
-
-
-def update_galchi_data(data, id):
-    try:
-        if isinstance(data, list):
-            if not data:  # Check if the list is empty
-                return None  # Return None for empty data
-            for item in data:
-                if item.get('id') == id:
-                    return item.get('waterLevel', 'Water level not available')
-            return None 
-        else:
-            return 'Invalid data format received.'  
-
-    except Exception as error:
-        return f"Error: {error}"  
-
-    
-def update_budhi_data(data, id):
-    try:
-        if isinstance(data, list):
-            if not data:  # Check if the list is empty
-                return None  # Return None for empty data
-            for item in data:
-                if item.get('id') == id:
-                    return item.get('waterLevel', 'Water level not available')
-            return None 
-        else:
-            return 'Invalid data format received.'  
-
-    except Exception as error:
-        return f"Error: {error}"   
-def update_dataframe(data):
-    # galchi_data=update_galchi_data(data=data,id=SocketGalchiId)
-    # budhi_data=update_budhi_data(data=data,id=SocketBudhiId)
-    galchi_data={'datetime': '2025-01-02T06:35:00+00:00', 'value': 366.036499023}
-    budhi_data={'datetime': '2025-01-02T06:45:00+00:00', 'value': 333.515014648}
-
-    galchi_df=pd.DataFrame([galchi_data])
-    budhi_df=pd.DataFrame([budhi_data])
-        
-    if not galchi_data or not budhi_data:      
-        return
-    
-    final_output=full_task_pipeline(galchi_df,budhi_df)
-    print(final_output)
-    # post_forecast(final_output)
-    print("------Updated DF----------")
-    
-
-update_dataframe('as')
