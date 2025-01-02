@@ -30,8 +30,7 @@ def connect_error(error):
 @socket_gss.on(SOCKET_NAMESPACE)
 def handle_namespace_event(data):
     logging.info("-----------DATA-----------")
-    logging.info(f"Received data: {data}")
-    
+    logging.info(f"Received data")
     # Forward the data to data_handler for processing
     update_dataframe(data)
 

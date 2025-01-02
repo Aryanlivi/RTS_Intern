@@ -73,6 +73,10 @@ def full_task_pipeline(galchi_df,budhi_df):
         if pd.isna(row['discharge_galchi']) and pd.isna(row['discharge_budhi']):
             merged_df.at[index, 'discharge'] = np.nan
     merged_df.reset_index(inplace=True)    
+    
+    #DISCRETIZE THE DATE TIME TO 10 MIN INTERVAL BY ROINDING DOWN:
+    merged_df['dateTime']=merged_df['dateTime'].dt.floor('10T')
+    
     computed_suirenitar_df=merged_df[['dateTime','discharge']]
     print(merged_df)
     # Rename columns first
@@ -130,9 +134,11 @@ def update_budhi_data(data, id):
     except Exception as error:
         return f"Error: {error}"   
 def update_dataframe(data):
-    galchi_data=update_galchi_data(data=data,id=SocketGalchiId)
-    budhi_data=update_budhi_data(data=data,id=SocketBudhiId)
-    
+    # galchi_data=update_galchi_data(data=data,id=SocketGalchiId)
+    # budhi_data=update_budhi_data(data=data,id=SocketBudhiId)
+    galchi_data={'datetime': '2025-01-02T06:35:00+00:00', 'value': 366.036499023}
+    budhi_data={'datetime': '2025-01-02T06:45:00+00:00', 'value': 333.515014648}
+
     galchi_df=pd.DataFrame([galchi_data])
     budhi_df=pd.DataFrame([budhi_data])
         
@@ -141,5 +147,8 @@ def update_dataframe(data):
     
     final_output=full_task_pipeline(galchi_df,budhi_df)
     print(final_output)
-    post_forecast(final_output)
+    # post_forecast(final_output)
     print("------Updated DF----------")
+    
+
+update_dataframe('as')
