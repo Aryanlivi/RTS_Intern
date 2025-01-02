@@ -1,0 +1,84 @@
+2025-01-02 14:51:53,610 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:51:53,612 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS Budhi_at_Khari (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS Siurenitar (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:51:53,614 - db_logger - INFO - Database connection closed.
+2025-01-02 14:55:26,211 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:55:26,212 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:55:26,214 - db_logger - INFO - Database connection closed.
+2025-01-02 14:56:20,116 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:56:20,118 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:56:20,120 - db_logger - INFO - Database connection closed.
+2025-01-02 14:58:07,802 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:58:07,803 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:58:07,805 - db_logger - INFO - Database connection closed.
+2025-01-02 14:58:59,667 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:58:59,668 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:58:59,669 - db_logger - INFO - Database connection closed.
+2025-01-02 14:59:18,891 - db_logger - INFO - Database connection established successfully.
+2025-01-02 14:59:18,897 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+    
+2025-01-02 14:59:18,897 - db_logger - INFO - Database connection closed.
+2025-01-02 15:00:18,535 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:00:18,536 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+2025-01-02 15:00:18,537 - db_logger - INFO - Database connection closed.
+2025-01-02 15:01:10,592 - db_logger - INFO - Database connection established successfully.
+2025-01-02 15:01:10,599 - db_logger - INFO - Query executed successfully: 
+        CREATE TABLE IF NOT EXISTS public.Galchi (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS public.Budhi_at_Khari (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+        CREATE TABLE IF NOT EXISTS public.Siurenitar (
+            ForecasteddateTime TIMESTAMP,
+            discharge_value FLOAT
+        );
+
+2025-01-02 15:01:10,602 - db_logger - INFO - Database connection closed.

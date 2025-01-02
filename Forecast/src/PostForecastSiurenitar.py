@@ -6,7 +6,7 @@ from Utils import  *
 from Socket.ApiService import APIService
 from ComputeForecast import compute_discharge_and_forecast
 from dotenv import load_dotenv
-
+# from DB_Service.Database import Database
 
 load_dotenv()
 
@@ -16,11 +16,12 @@ DISTANCE_BUDHI_SUIRENITAR=18500
 
 
 
+
 def standardize_river_data(data, id):
     try:
         if isinstance(data, list):
             if not data:  # Check if the list is empty
-                return None  # Return None for empty data
+                return None 
             for item in data:
                 if item.get('id') == id:
                     return item.get('waterLevel', 'Water level not available')
@@ -45,10 +46,8 @@ def compute_and_post(data):
     print('asdsadad')
     final_output=compute_discharge_and_forecast(galchi_df,budhi_df)
     print(final_output)
-    api_service=APIService()
-    
+    # api_service=APIService()
     #api_service.post_forecast(final_output)
     print("------Updated DF----------")
     
-
-# update_dataframe('as')
+compute_and_post('a')
