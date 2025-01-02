@@ -96,8 +96,6 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
     BUDHI_TABLE=os.getenv('budhi_table')
     SIURENITAR_TABLE=os.getenv('siurenitar_table')
     
-    shifted_galchi_df.reset_index(inplace=True)
-    shifted_budhi_df.reset_index(inplace=True)
 
 
 

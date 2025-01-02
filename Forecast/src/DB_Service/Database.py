@@ -71,6 +71,7 @@ class Database:
             # Ensure cursor is initialized
             if not self.cursor:
                 self.cursor = self.connection.cursor()
+            df.reset_index(inplace=True)
             data_tuple = tuple(float(value) if isinstance(value, np.float64) else value for value in df.iloc[0])
             print(data_tuple)
 
