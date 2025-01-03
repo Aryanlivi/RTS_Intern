@@ -50,7 +50,7 @@ def compute_and_post(data):
         return
     final_output=compute_discharge_and_forecast(galchi_df,budhi_df)
     print(final_output)
-    api_service=APIService()
-    api_service.post_forecast(final_output)
+    # api_service=APIService()
+    # api_service.post_forecast(final_output)
     print("------Updated DF----------")
     

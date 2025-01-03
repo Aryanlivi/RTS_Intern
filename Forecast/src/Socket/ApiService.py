@@ -11,7 +11,7 @@ class APIService:
         self.parameter_code = os.getenv('parameter_code')
         self.token = os.getenv('token')
         
-    def post_forecast(self,data):
+    def post_forecast(base_url,data):
         url = f'{self.baseURL}/import'
         for item in data:
             item['origin_code']=self.origin_code
