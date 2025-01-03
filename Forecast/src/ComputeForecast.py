@@ -86,15 +86,33 @@ def get_merged_df(shifted_galchi_df,shifted_budhi_df):
 
 
 
-
-def get_latest_datetime(df1, df2):
+def get_latest_suirenitar_data(db, SIURENITAR_TABLE, latest_datetime):
     try:
-        latest_datetime = max(df1['dateTime'].iloc[0], df2['dateTime'].iloc[0])
-        print(f"The latest datetime is: {latest_datetime}")
-        return latest_datetime
+        query = f"SELECT * FROM {SIURENITAR_TABLE} WHERE dateTime = '{latest_datetime}'"
+        result = db.fetch(query)
+        
+        if result:
+            columns = ['dateTime', 'discharge']
+
+            json_data = []
+            for row in result:
+                row_dict = {columns[i]: row[i] for i in range(len(columns))}
+                json_data.append(row_dict)
+
+            # Convert the list of dictionaries to JSON format,default=str to handle dateTime Conversion.
+            json_output = json.dumps(json_data, default=str) 
+
+            print("Latest Suirenitar data in JSON format:")
+
+            return json_output
+        else:
+            print("No data found for the latest datetime.")
+            return None
+    
     except Exception as e:
-        print(f"Error comparing datetimes: {e}")
+        print(f"Error fetching latest Suirenitar data: {e}")
         return None
+    
 def compute_discharge_and_forecast(galchi_df,budhi_df):
     shifted_galchi_df,shifted_budhi_df=get_shifted_df(galchi_df,budhi_df)
     
@@ -107,8 +125,9 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
 
     db.insert_df(shifted_galchi_df,GALCHI_TABLE)
     db.insert_df(shifted_budhi_df,BUDHI_TABLE)
-    update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
-    
+    is_updated,latest_dateTime=update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
+    if is_updated:
+        return get_latest_suirenitar_data(db,SIURENITAR_TABLE,latest_dateTime)
     
     # computed_suirenitar_df=merged_df[['dateTime','discharge']]
     

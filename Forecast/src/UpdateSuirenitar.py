@@ -41,8 +41,8 @@ def update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE):
         budhi_row = db.fetch(query_budhi)
 
         # Initialize variables for summing discharge values
-        galchi_value = galchi_row[0][1] if galchi_row else None  # Adjusted index to access correct column
-        budhi_value = budhi_row[0][1] if budhi_row else None  # Adjusted index to access correct column
+        galchi_value = galchi_row[0][1] if galchi_row else None 
+        budhi_value = budhi_row[0][1] if budhi_row else None  
 
         print(f"Galchi discharge: {galchi_value}")
         print(f"Budhi discharge: {budhi_value}")
@@ -66,6 +66,7 @@ def update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE):
         """
         db.execute_query(update_query)
         print(f"Updated Suirenitar table with datetime {latest_datetime} and discharge {total_discharge}")
+        return True,latest_datetime
     
     except Exception as e:
         print(f"Error updating Suirenitar table: {e}")

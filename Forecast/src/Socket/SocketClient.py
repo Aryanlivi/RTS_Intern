@@ -2,9 +2,11 @@ import logging
 import socketio
 import os
 from dotenv import load_dotenv
-from PostForecastSiurenitar import compute_and_post
-import sys
 
+import sys
+# Add the parent directory of src to the path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from PostForecastSiurenitar import compute_and_post
 class SocketClient:
     def __init__(self):
         # Load environment variables
@@ -45,7 +47,7 @@ class SocketClient:
     def handle_namespace_event(self, data):
         logging.info(f"Received data from namespace;{self.SOCKET_NAMESPACE}")
         # Forward the data to data_handler for processing
-        compute_and_post('a')
+        compute_and_post(data)
 
     def disconnect(self):
         logging.info('Socket disconnected')
@@ -66,7 +68,7 @@ class SocketClient:
             logging.info('Socket client terminated by user')
             self.socket_gss.disconnect()
 
-# # Run the client
-# if __name__ == "__main__":
-#     client = SocketClient()
-#     client.run()
+# Run the client
+if __name__ == "__main__":
+    client = SocketClient()
+    client.run()
