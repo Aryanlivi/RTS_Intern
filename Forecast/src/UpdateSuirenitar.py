@@ -1,38 +1,37 @@
 from dotenv import load_dotenv
 import os
+import pandas as pd
+from datetime import datetime
 load_dotenv()
 
-def get_latest_datetime_from_tables(db,GALCHI_TABLE,BUDHI_TABLE):
+
+
+def get_rows_up_to_datetime(db, table_name, datetime):
     try:
-        # Fetch the latest datetime from both tables
-        query_galchi = f"SELECT MAX(dateTime) FROM {GALCHI_TABLE}"
-        query_budhi = f"SELECT MAX(dateTime) FROM {BUDHI_TABLE}"
-        
-        latest_galchi_time = db.fetch(query_galchi)
-        latest_budhi_time = db.fetch(query_budhi)
-        
-        # Extract datetime from the tuple
-        latest_galchi_time = latest_galchi_time[0][0] if latest_galchi_time else None
-        latest_budhi_time = latest_budhi_time[0][0] if latest_budhi_time else None
-        
-        # Compare the two datetime values
-        latest_datetime = max(latest_galchi_time, latest_budhi_time) if latest_galchi_time and latest_budhi_time else None
-        
-        print(f"The latest datetime is: {latest_datetime}")
-        return latest_datetime
+        # Fetch all rows from the table up to and including the given datetime
+        query = f"""
+            SELECT dateTime, discharge FROM {table_name}
+            WHERE dateTime <= '{datetime}'
+            ORDER BY dateTime DESC
+        """
+        return (db.fetch(query))[0][1]
     except Exception as e:
-        print(f"Error fetching latest datetime: {e}")
-        return None
+        print(f"Error fetching rows up to {datetime} from {table_name}: {e}")
+        return []
+    
+    
+def get_latest_dateTime(shifted_galchi_df,shifted_budhi_df):    
+    latest_galchi_df_time = shifted_galchi_df['dateTime'].iloc[0]
+    latest_budhi_df_time = shifted_budhi_df['dateTime'].iloc[0]
+    latest_dateTime=max(latest_galchi_df_time, latest_budhi_df_time) 
+    return latest_dateTime
 
-
-
-def update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE):
+def insert_suirenitar_table(db,latest_datetime,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE):
     try:
-        # Get the latest datetime from both tables
-        latest_datetime = get_latest_datetime_from_tables(db, GALCHI_TABLE, BUDHI_TABLE)
         
         if latest_datetime is None:
             return
+
         # Fetch rows from Galchi and Budhi tables for the latest datetime
         query_galchi = f"SELECT * FROM {GALCHI_TABLE} WHERE dateTime = '{latest_datetime}'"
         query_budhi = f"SELECT * FROM {BUDHI_TABLE} WHERE dateTime = '{latest_datetime}'"
@@ -43,49 +42,87 @@ def update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE):
         # Initialize variables for summing discharge values
         galchi_value = galchi_row[0][1] if galchi_row else None 
         budhi_value = budhi_row[0][1] if budhi_row else None  
-
-        print(f"Galchi discharge: {galchi_value}")
-        print(f"Budhi discharge: {budhi_value}")
+        total_discharge=0
+        
         # Sum values if both rows exist
         if galchi_value is not None and budhi_value is not None:
             total_discharge = galchi_value + budhi_value
         else:
-            # Handle missing values, keeping previous valid value from the Suirenitar table
-            total_discharge = get_previous_valid_value(db,SIURENITAR_TABLE, latest_datetime)
-
-            # If one of the tables has a value, add it to the total discharge
+            # If one of the tables has a value for latest time, add it to the total discharge
             if galchi_value is not None:
-                total_discharge += galchi_value
+                total_discharge = get_rows_up_to_datetime(db,BUDHI_TABLE, latest_datetime)+galchi_value
             elif budhi_value is not None:
-                total_discharge += budhi_value
-        
-        # Update the Suirenitar table with the computed discharge
+                total_discharge=get_rows_up_to_datetime(db,GALCHI_TABLE, latest_datetime)+budhi_value
+        # Update or insert into the Suirenitar table
         update_query = f"""
-        INSERT INTO {SIURENITAR_TABLE} (dateTime, discharge) 
-        VALUES ('{latest_datetime}', {total_discharge})
-        """
+            INSERT INTO {SIURENITAR_TABLE} (dateTime, discharge) 
+            VALUES ('{latest_datetime}', {total_discharge})
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            """
         db.execute_query(update_query)
         print(f"Updated Suirenitar table with datetime {latest_datetime} and discharge {total_discharge}")
-        return True,latest_datetime
+        return True, latest_datetime
     
     except Exception as e:
         print(f"Error updating Suirenitar table: {e}")
 
 
-def get_previous_valid_value(db,SIURENITAR_TABLE, latest_datetime):
+
+def clean_datetime_value(value):
+            if isinstance(value, datetime):
+                return value.replace(tzinfo=None)  # Remove timezone if present
+            return value
+
+
+def recalculate_suirenitar_table(db, galchi_table, budhi_table, siurenitar_table):
     try:
-        # Fetch the last valid discharge value before the latest datetime
-        query = f"""
-        SELECT discharge FROM {SIURENITAR_TABLE}
-        WHERE dateTime < '{latest_datetime}' 
-        ORDER BY dateTime DESC LIMIT 1
-        """
-        result = db.fetch(query)
         
-        if result:
-            return result['discharge']
-        return 0  # Return 0 if no previous value is found
-    
+        # Fetch all rows in siurenitar_table
+        query_suirenitar = f"SELECT dateTime FROM {siurenitar_table} ORDER BY dateTime ASC"
+        siurenitar_rows = db.fetch(query_suirenitar)
+
+        
+        nepali_offset = pd.Timedelta(hours=5, minutes=45)
+        for suirenitar_time in siurenitar_rows:
+            suirenitar_time = suirenitar_time[0]
+
+            # Find the closest previous or equal datetime in galchi_table
+            query_galchi = f"""
+                SELECT discharge FROM {galchi_table}
+                WHERE dateTime <= '{suirenitar_time}'
+                ORDER BY dateTime DESC LIMIT 1
+            """
+            galchi_discharge = db.fetch(query_galchi)
+            galchi_discharge = galchi_discharge[0][0] if galchi_discharge else 0
+
+            # Find the closest previous or equal datetime in budhi_table
+            query_budhi = f"""
+                SELECT discharge FROM {budhi_table}
+                WHERE dateTime <= '{suirenitar_time}'
+                ORDER BY dateTime DESC LIMIT 1
+            """
+            budhi_discharge = db.fetch(query_budhi)
+            budhi_discharge = budhi_discharge[0][0] if budhi_discharge else 0
+
+            # Calculate the total discharge
+            total_discharge = galchi_discharge + budhi_discharge
+
+
+            suirenitar_time=clean_datetime_value(suirenitar_time)
+            # Update the siurenitar_table for this dateTime  
+            update_query = f"""
+                UPDATE {siurenitar_table}
+                SET discharge = {total_discharge}
+                WHERE dateTime = '{suirenitar_time}'
+            """
+            db.execute_query(update_query)
+            print(f"Updated {siurenitar_table}: dateTime={suirenitar_time}, discharge={total_discharge}")
+
+        print(f"Recalculated all rows in {siurenitar_table}.")
+
     except Exception as e:
-        print(f"Error fetching previous valid value: {e}")
-        return 0
+        print(f"Error recalculating {siurenitar_table}: {e}")
+        
+        
+        

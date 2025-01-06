@@ -8,7 +8,7 @@ import json
 from dotenv import load_dotenv
 import os 
 from DB_Service.Database import Database
-from UpdateSuirenitar import update_suirenitar_table
+from UpdateSuirenitar import recalculate_suirenitar_table,get_latest_dateTime,insert_suirenitar_table
 
 load_dotenv()
 
@@ -56,7 +56,6 @@ def get_shifted_df(galchi_df,budhi_df):
     shifted_galchi_df['dateTime'] = pd.to_datetime(shifted_galchi_df['dateTime'])
     shifted_galchi_df['dateTime']=shifted_galchi_df['dateTime'].dt.floor('10T')
     shifted_galchi_df.set_index('dateTime',inplace=True)
-
     return shifted_galchi_df,shifted_budhi_df
 
 
@@ -122,14 +121,77 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
     GALCHI_TABLE=os.getenv('galchi_table')
     BUDHI_TABLE=os.getenv('budhi_table')
     SIURENITAR_TABLE=os.getenv('siurenitar_table')
-
     db.insert_df(shifted_galchi_df,GALCHI_TABLE)
     db.insert_df(shifted_budhi_df,BUDHI_TABLE)
-    is_updated,latest_dateTime=update_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
-    if is_updated:
-        return get_latest_suirenitar_data(db,SIURENITAR_TABLE,latest_dateTime)
+    latest_dateTime=get_latest_dateTime(shifted_galchi_df,shifted_budhi_df)
+    insert_suirenitar_table(db,latest_dateTime,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
+    recalculate_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
+    return None
+    # # Update the Suirenitar table and get the latest data
+    # try:
+    #     is_updated, latest_dateTime = update_suirenitar_table(db, GALCHI_TABLE, BUDHI_TABLE, SIURENITAR_TABLE)
+    # except Exception as e:
+    #     print(f"Error updating Suirenitar table: {e}")
+    #     return None
+
+    # json_output = [{}]
+    # if is_updated:
+    #     try:
+    #         output = get_latest_suirenitar_data(db, SIURENITAR_TABLE, latest_dateTime)
+    #         json_output = json.loads(output)
+    #     except json.JSONDecodeError as e:
+    #         print(f"Error decoding JSON output: {e}")
+    #         return None
+    #     except Exception as e:
+    #         print(f"Error fetching latest Suirenitar data: {e}")
+    #         return None
+
+    # # Process the data into a DataFrame
+    # try:
+    #     computed_suirenitar_df = pd.DataFrame(json_output)
+    #     if computed_suirenitar_df.empty:
+    #         print("No data available to process.")
+    #         return None
+        
+    #     # Rename columns
+    #     computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
+
+    #     # Convert 'time' to datetime
+    #     computed_suirenitar_df['time'] = pd.to_datetime(computed_suirenitar_df['time'], errors='coerce')
+        
+    #     # Handle invalid datetime conversion
+    #     if computed_suirenitar_df['time'].isnull().any():
+    #         print("Invalid datetime values detected.")
+    #         return None
+
+    #     # Convert to Nepali Time (+5:45)
+    #     nepali_offset = pd.Timedelta(hours=5, minutes=45)
+    #     computed_suirenitar_df['time'] = computed_suirenitar_df['time'] + nepali_offset
+
+    #     # Format 'time' column to ISO format
+    #     computed_suirenitar_df['time'] = computed_suirenitar_df['time'].dt.strftime('%Y-%m-%dT%H:%M')
+
+    #     # Convert DataFrame to JSON
+    #     output = computed_suirenitar_df.to_json(orient='records', date_format='iso')
+    #     result = json.loads(output)
+    #     print(result)
+    #     print(type(result))
+    #     return result
+
+    # except Exception as e:
+    #     print(f"Error processing data: {e}")
+    #     return None
     
-    # computed_suirenitar_df=merged_df[['dateTime','discharge']]
+    
+    # json_output=[{}]
+    # if is_updated:
+    #     output=get_latest_suirenitar_data(db,SIURENITAR_TABLE,latest_dateTime)
+    #     json_output = json.loads(output)
+    #     print(type(json_output))
+    #     print(json_output)
+
+    # computed_suirenitar_df=pd.DataFrame(json_output)
+    # # print(computed_suirenitar_df)
     
     # # Rename columns first
     # computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
@@ -151,5 +213,8 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
     #     print(f"Error during JSON conversion: {e}")
     #     return None
 
-    # return json_result
+        
+    # computed_suirenitar_df=merged_df[['dateTime','discharge']]
+    
+    # 
             

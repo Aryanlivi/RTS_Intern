@@ -14,17 +14,17 @@ db.connect()
 
 db.execute_query(f'''
     CREATE TABLE IF NOT EXISTS public.{galchi_table} (
-    dateTime TIMESTAMP,
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
     discharge FLOAT
     );
 
     CREATE TABLE IF NOT EXISTS public.{budhi_table} (
-        dateTime TIMESTAMP,
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
         discharge FLOAT
     );
 
     CREATE TABLE IF NOT EXISTS public.{siurenitar_table} (
-        dateTime TIMESTAMP,
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
         discharge FLOAT
     );
 

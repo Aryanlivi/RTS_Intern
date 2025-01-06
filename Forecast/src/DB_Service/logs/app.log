@@ -438,3 +438,2185 @@ LINE 2: ...  INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)...
         
 2025-01-03 14:51:17,859 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 21:05:00'
 2025-01-03 14:51:17,859 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 5), 67.33143778959297)]
+2025-01-03 15:40:21,906 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:40:21,915 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:40:21,916 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55),)]
+2025-01-03 15:40:21,917 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:40:21,917 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 45),)]
+2025-01-03 15:40:21,918 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:40:21,919 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:40:21,920 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:40:21,921 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:40:21,922 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 21:55:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:40:21,923 - db_logger - INFO - Fetched Data:[(67.33143778959297,)]
+2025-01-03 15:40:21,924 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 21:55:00', 63.383800318316105)
+        
+2025-01-03 15:40:21,925 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:40:21,926 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:43:46,995 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:43:47,006 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:43:47,007 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55),)]
+2025-01-03 15:43:47,008 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:43:47,009 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 45),)]
+2025-01-03 15:43:47,010 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:43:47,011 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:43:47,011 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:43:47,012 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:43:47,014 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 21:55:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:43:47,014 - db_logger - INFO - Fetched Data:[(67.33143778959297,)]
+2025-01-03 15:43:47,015 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 21:55:00', 63.383800318316105)
+        
+2025-01-03 15:43:47,016 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:43:47,017 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:44:46,162 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:44:46,168 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:44:46,169 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55),)]
+2025-01-03 15:44:46,170 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:44:46,171 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 45),)]
+2025-01-03 15:44:46,172 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:44:46,172 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:44:46,173 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:44:46,174 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:44:46,176 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 21:55:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:44:46,176 - db_logger - INFO - Fetched Data:[(67.33143778959297,)]
+2025-01-03 15:44:46,178 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 21:55:00', 63.383800318316105)
+        
+2025-01-03 15:44:46,180 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:44:46,181 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:46:10,395 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:46:10,406 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:46:10,406 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55),)]
+2025-01-03 15:46:10,407 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:46:10,407 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 45),)]
+2025-01-03 15:46:10,408 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:46:10,409 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:46:10,410 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:46:10,410 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:46:10,411 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 21:55:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:46:10,412 - db_logger - INFO - Fetched Data:[(67.33143778959297,)]
+2025-01-03 15:46:10,413 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 21:55:00', 63.383800318316105)
+        
+2025-01-03 15:46:10,414 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 21:55:00'
+2025-01-03 15:46:10,414 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105), (datetime.datetime(2025, 1, 3, 21, 55), 63.383800318316105)]
+2025-01-03 15:50:33,985 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:50:33,991 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:50:33,992 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 15:50:33,992 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:50:33,993 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 55),)]
+2025-01-03 15:50:33,994 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:50:33,994 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:50:33,995 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:50:33,995 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:50:33,997 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:50:33,998 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 15:50:33,999 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 15:50:34,001 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:50:34,001 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:51:08,968 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:51:08,977 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:51:08,978 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 15:51:08,978 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:51:08,979 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 55),)]
+2025-01-03 15:51:08,980 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:51:08,980 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:51:08,981 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:51:08,982 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:51:08,985 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:51:08,986 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 15:51:08,987 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 15:51:08,989 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:51:08,989 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:53:50,387 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:53:50,396 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:53:50,396 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 15:53:50,397 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:53:50,398 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 55),)]
+2025-01-03 15:53:50,398 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:53:50,399 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:53:50,400 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:53:50,400 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:53:50,402 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:53:50,403 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 15:53:50,405 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 15:53:50,406 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:53:50,407 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:56:32,234 - db_logger - INFO - Database connection established successfully.
+2025-01-03 15:56:32,243 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 15:56:32,243 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 15:56:32,245 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 15:56:32,245 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 19, 55),)]
+2025-01-03 15:56:32,246 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:56:32,246 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 15:56:32,247 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:56:32,247 - db_logger - INFO - Fetched Data:[]
+2025-01-03 15:56:32,249 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 15:56:32,250 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 15:56:32,251 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 15:56:32,253 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 15:56:32,253 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:00:14,993 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:00:15,003 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:00:15,004 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 16:00:15,004 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:00:15,005 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 20, 5),)]
+2025-01-03 16:00:15,006 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:00:15,006 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:00:15,007 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:00:15,007 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:00:15,009 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:00:15,009 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 16:00:15,011 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 16:00:15,012 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:00:15,013 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:01:46,255 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:01:46,266 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:01:46,266 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 16:01:46,267 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:01:46,267 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 20, 5),)]
+2025-01-03 16:01:46,268 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:01:46,268 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:01:46,268 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:01:46,269 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:01:46,270 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:01:46,270 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 16:01:46,271 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 16:01:46,272 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:01:46,272 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:02:21,808 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:02:21,817 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:02:21,818 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5),)]
+2025-01-03 16:02:21,818 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:02:21,819 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 20, 5),)]
+2025-01-03 16:02:21,820 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:02:21,820 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:02:21,821 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:02:21,821 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:02:21,823 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-03 22:05:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:02:21,824 - db_logger - INFO - Fetched Data:[(63.383800318316105,)]
+2025-01-03 16:02:21,825 - db_logger - INFO - Query executed successfully: 
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-03 22:05:00', 63.367560716562224)
+        
+2025-01-03 16:02:21,826 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-03 22:05:00'
+2025-01-03 16:02:21,826 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224), (datetime.datetime(2025, 1, 3, 22, 5), 63.367560716562224)]
+2025-01-03 16:07:19,924 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:07:19,929 - db_logger - ERROR - Error fetching data for query 'SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar': relation "forecast_galchi_to_siurenitar" does not exist
+LINE 1: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+                                  ^
+
+2025-01-03 16:07:19,930 - db_logger - ERROR - Error fetching data for query 'SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-03 16:08:48,848 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:08:48,857 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP,
+        discharge FLOAT
+    );
+
+
+2025-01-03 16:08:48,858 - db_logger - INFO - Database connection closed.
+2025-01-03 16:08:58,127 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:08:58,136 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:08:58,137 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:08:58,137 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:08:58,138 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45),)]
+2025-01-03 16:08:58,139 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:08:58,139 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:08:58,140 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:08:58,140 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:08:58,142 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-02 18:45:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:08:58,143 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:08:58,144 - db_logger - ERROR - Error executing query '
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-02 18:45:00', 62.448612874128514)
+        ON DUPLICATE KEY UPDATE
+        discharge = 62.448612874128514
+        ': syntax error at or near "DUPLICATE"
+LINE 4:         ON DUPLICATE KEY UPDATE
+                   ^
+
+2025-01-03 16:08:58,146 - db_logger - ERROR - Error fetching data for query 'SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-02 18:45:00'': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-03 16:10:13,544 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:10:13,553 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:10:13,553 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:10:13,554 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:10:13,555 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45),)]
+2025-01-03 16:10:13,555 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:10:13,555 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514), (datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:10:13,556 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:10:13,556 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:10:13,558 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-02 18:45:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:10:13,558 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:10:13,559 - db_logger - ERROR - Error executing query '
+        INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+        VALUES ('2025-01-02 18:45:00', 62.448612874128514)
+        ON DUPLICATE KEY UPDATE
+        discharge = 62.448612874128514
+        ': syntax error at or near "DUPLICATE"
+LINE 4:         ON DUPLICATE KEY UPDATE
+                   ^
+
+2025-01-03 16:10:13,560 - db_logger - ERROR - Error fetching data for query 'SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-02 18:45:00'': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-03 16:11:15,991 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:11:16,007 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 16:11:16,009 - db_logger - INFO - Database connection closed.
+2025-01-03 16:11:22,262 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:11:22,277 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:11:22,277 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:11:22,278 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:11:22,279 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45),)]
+2025-01-03 16:11:22,280 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:11:22,281 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:11:22,281 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:11:22,282 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:11:22,284 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-02 18:45:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:11:22,285 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:11:22,287 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00', 62.448612874128514)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:11:22,289 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:11:22,290 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:20:12,002 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:20:12,012 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar
+2025-01-03 16:20:12,013 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:20:12,014 - db_logger - INFO - Data fetched successfully for query: SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar
+2025-01-03 16:20:12,014 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45),)]
+2025-01-03 16:20:12,015 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:20:12,016 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:20:12,016 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:20:12,017 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:20:12,019 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        WHERE dateTime < '2025-01-02 18:45:00' 
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:20:12,020 - db_logger - INFO - Fetched Data:[]
+2025-01-03 16:20:12,021 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00', 62.448612874128514)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:20:12,023 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Siurenitar_Data WHERE dateTime = '2025-01-02 18:45:00'
+2025-01-03 16:20:12,024 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:23:27,874 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:23:27,881 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT GREATEST(
+                (SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar),
+                (SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar)
+            )
+        
+2025-01-03 16:23:27,882 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:23:27,883 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Galchi_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:23:27,883 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:23:27,884 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:23:27,884 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 16:23:27,885 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:23:27,886 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 16:23:27,887 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 16:45:00', 252.69501058185367)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:23:27,889 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 18:45:00', 315.14362345598215)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:30:10,939 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:30:10,947 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT GREATEST(
+                (SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar),
+                (SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar)
+            )
+        
+2025-01-03 16:30:10,948 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:30:10,949 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Galchi_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:30:10,950 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:30:10,950 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:30:10,951 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 16:30:10,952 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:30:10,953 - db_logger - INFO - Fetched Data:[(315.14362345598215,)]
+2025-01-03 16:30:10,954 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 16:45:00', 505.3900211637073)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:30:10,955 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 18:45:00', 567.8386340378358)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:40:14,386 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:40:14,396 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT GREATEST(
+                (SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar),
+                (SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar)
+            )
+        
+2025-01-03 16:40:14,397 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:40:14,398 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Galchi_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:40:14,399 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:40:14,399 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:40:14,400 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 16:40:14,401 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:40:14,401 - db_logger - INFO - Fetched Data:[(567.8386340378358,)]
+2025-01-03 16:40:14,403 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 16:45:00', 758.085031745561)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:40:14,404 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 18:45:00', 820.5336446196895)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:50:12,817 - db_logger - INFO - Database connection established successfully.
+2025-01-03 16:50:12,826 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT GREATEST(
+                (SELECT MAX(dateTime) FROM Forecast_Galchi_To_Siurenitar),
+                (SELECT MAX(dateTime) FROM Forecast_Budhi_At_Khari_To_Siurenitar)
+            )
+        
+2025-01-03 16:50:12,827 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 16:50:12,827 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Galchi_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:50:12,828 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 16:50:12,829 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge 
+            FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 16:50:12,829 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 16:50:12,831 - db_logger - INFO - Data fetched successfully for query: 
+        SELECT discharge FROM Forecast_Siurenitar_Data
+        ORDER BY dateTime DESC LIMIT 1
+        
+2025-01-03 16:50:12,832 - db_logger - INFO - Fetched Data:[(820.5336446196895,)]
+2025-01-03 16:50:12,833 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 16:45:00', 1010.7800423274147)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:50:12,834 - db_logger - INFO - Query executed successfully: 
+                INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge)
+                VALUES ('2025-01-02 18:45:00', 1073.2286552015432)
+                ON CONFLICT (dateTime)
+                DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 16:53:30,549 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:00:11,351 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:10:12,829 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:16:10,058 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:16:10,073 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:16:10,074 - db_logger - INFO - Database connection closed.
+2025-01-03 17:16:19,157 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:16:19,169 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:16:19,170 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:16:19,171 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:16:19,171 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:16:19,173 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:16:19,174 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:17:48,002 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:17:48,014 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:17:48,014 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:17:48,015 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:17:48,016 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:17:48,018 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:17:48,019 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:17:48,020 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:17:48,020 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:17:48,021 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:17:48,022 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:17:48,022 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:17:48,025 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:19:15,032 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:19:15,040 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:19:15,040 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:19:15,041 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:19:15,041 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:19:15,044 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:19:15,046 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:19:15,047 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:19:15,048 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:19:15,050 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:19:15,051 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:19:15,052 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:19:15,053 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:20:05,596 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:20:05,604 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:20:05,604 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:05,605 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:20:05,605 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:05,608 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:20:05,610 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:20:05,610 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:20:05,611 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:20:05,611 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:05,612 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:20:05,612 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:05,613 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:20:11,868 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:20:11,878 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:20:11,879 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:11,879 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:20:11,880 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:11,882 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:20:11,885 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:20:11,885 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:20:11,886 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:20:11,887 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:11,887 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:20:11,888 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:20:11,889 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:22:15,082 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:24:34,636 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:24:34,650 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:24:34,652 - db_logger - INFO - Database connection closed.
+2025-01-03 17:24:38,690 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:24:38,701 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:24:38,701 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:24:38,702 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:24:38,702 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:24:38,705 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:24:38,706 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:24:38,707 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:24:38,708 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:24:38,709 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:24:38,709 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:24:38,711 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:24:38,712 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:25:49,126 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:25:49,136 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:25:49,136 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:25:49,138 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:25:49,138 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:25:49,142 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:25:49,144 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:25:49,144 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:25:49,145 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:25:49,146 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:25:49,146 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:25:49,147 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:25:49,148 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:30:18,113 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:30:18,128 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITH TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITH TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITH TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:30:18,128 - db_logger - INFO - Database connection closed.
+2025-01-03 17:30:27,625 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:30:27,635 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:30:27,635 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45, tzinfo=datetime.timezone(datetime.timedelta(seconds=20700))), 62.448612874128514)]
+2025-01-03 17:30:27,636 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:30:27,636 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:30:27,638 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:30:27,638 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45, tzinfo=datetime.timezone(datetime.timedelta(seconds=20700))), 190.24639770772515)]
+2025-01-03 17:30:27,639 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:30:27,640 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:32:07,340 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:32:07,347 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:32:07,347 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45, tzinfo=datetime.timezone(datetime.timedelta(seconds=20700))), 62.448612874128514)]
+2025-01-03 17:32:07,349 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:32:07,349 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:32:07,351 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:32:07,352 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45, tzinfo=datetime.timezone(datetime.timedelta(seconds=20700))), 190.24639770772515)]
+2025-01-03 17:32:07,353 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:32:07,354 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:34:13,109 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:34:13,124 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:34:13,126 - db_logger - INFO - Database connection closed.
+2025-01-03 17:34:19,079 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:34:19,091 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:34:19,091 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:34:19,091 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:34:19,092 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:34:19,095 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:34:19,096 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:34:19,097 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:34:19,097 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:34:19,099 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:34:19,100 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:34:19,101 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:34:19,102 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:36:21,971 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:36:46,018 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:36:46,030 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:36:46,030 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:36:46,031 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:36:46,031 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:36:46,034 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:36:46,039 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:36:46,040 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:36:46,040 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:36:46,041 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:36:46,042 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:36:46,043 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:36:46,044 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:37:49,175 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:37:49,188 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:37:49,188 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:37:49,189 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:37:49,189 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:37:49,191 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:37:49,193 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:37:49,194 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:37:49,194 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:37:49,195 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:37:49,195 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:37:49,196 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:37:49,197 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:40:14,380 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:40:14,394 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:40:14,394 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:40:14,395 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:40:14,396 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:40:14,399 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:40:14,403 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:40:14,403 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:40:14,404 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:40:14,404 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:40:14,405 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:40:14,405 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:40:14,406 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:41:39,608 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:41:39,612 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:41:39,612 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:41:39,613 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-03 17:41:39,614 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:41:39,617 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:41:39,620 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:41:39,620 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:41:39,621 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:41:39,622 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:41:39,622 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:41:39,623 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:41:39,624 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:43:53,479 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:44:14,308 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:44:14,315 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:44:14,315 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:44:14,316 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:44:14,316 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:44:14,317 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:44:14,318 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:44:14,320 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:44:14,320 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:44:14,322 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:44:14,323 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:44:14,324 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:44:14,325 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:44:14,327 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:45:40,656 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:45:40,662 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:45:40,662 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:45:40,663 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:45:40,663 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:45:40,664 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:45:40,665 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:45:40,666 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:45:40,666 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:45:40,667 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:45:40,668 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:45:40,669 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:45:40,670 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:45:40,672 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:50:11,925 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:50:11,936 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:50:11,936 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:50:11,937 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:50:11,937 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:50:11,938 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:50:11,939 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:50:11,940 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:50:11,940 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-03 17:50:11,941 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:50:11,942 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:50:11,943 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:50:11,943 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:50:11,945 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-03 17:52:00,135 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:52:00,141 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:52:00,142 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:52:00,143 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:52:00,143 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:52:00,144 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:52:00,145 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:52:00,147 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:54:31,275 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:54:31,289 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:54:31,290 - db_logger - INFO - Database connection closed.
+2025-01-03 17:54:38,088 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:54:38,095 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:54:38,096 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:54:38,096 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:54:38,097 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:54:38,098 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:54:38,098 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:54:38,102 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:54:38,103 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:54:38,103 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 17:54:38,104 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:54:38,105 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:54:38,105 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:54:38,106 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:54:38,106 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 17:56:15,441 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:56:15,449 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 17:56:15,449 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-03 17:56:15,450 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 17:56:15,451 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:56:15,451 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:56:15,452 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 14, 5), 2672.03385347839), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:56:15,454 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 2734.4824663525187)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:56:15,456 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:56:15,457 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-03 17:56:15,458 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:56:15,458 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:56:15,459 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:56:15,460 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:56:15,460 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 17:56:15,461 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:56:15,462 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:56:15,462 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:56:15,463 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:56:15,464 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-03 17:58:13,635 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:58:13,649 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-03 17:58:13,650 - db_logger - INFO - Database connection closed.
+2025-01-03 17:58:18,558 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:58:18,567 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:58:18,568 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45), 62.448612874128514)]
+2025-01-03 17:58:18,570 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-03 17:58:18,571 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:58:18,572 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 18:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:58:18,574 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-03 17:58:18,576 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:58:18,578 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:58:18,578 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-03 17:58:18,579 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:18,580 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:58:18,581 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:18,581 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:58:18,582 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 17:58:54,664 - db_logger - INFO - Database connection established successfully.
+2025-01-03 17:58:54,675 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 17:58:54,675 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-03 17:58:54,676 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 17:58:54,676 - db_logger - INFO - Fetched Data:[]
+2025-01-03 17:58:54,677 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 17:58:54,678 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515)]
+2025-01-03 17:58:54,679 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 17:58:54,681 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 17:58:54,681 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-03 17:58:54,682 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:54,683 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:58:54,683 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:54,684 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:58:54,685 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 17:58:54,688 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:54,689 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 17:58:54,690 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 17:58:54,691 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-03 17:58:54,691 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-03 18:00:09,700 - db_logger - INFO - Database connection established successfully.
+2025-01-03 18:00:09,707 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 18:00:09,707 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-03 18:00:09,708 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 18:00:09,708 - db_logger - INFO - Fetched Data:[]
+2025-01-03 18:00:09,709 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 18:00:09,710 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-03 18:00:09,711 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 18:00:09,713 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 18:00:09,713 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-03 18:00:09,714 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:09,715 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 18:00:09,715 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:09,716 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-03 18:00:09,717 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 18:00:09,718 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:09,718 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 18:00:09,719 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:09,720 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-03 18:00:09,721 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-03 18:00:12,254 - db_logger - INFO - Database connection established successfully.
+2025-01-03 18:00:12,264 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 18:00:12,264 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-03 18:00:12,266 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-03 18:00:12,266 - db_logger - INFO - Fetched Data:[]
+2025-01-03 18:00:12,267 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-03 18:00:12,268 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-03 18:00:12,271 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-03 18:00:12,273 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-03 18:00:12,274 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-03 18:00:12,275 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:12,275 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 18:00:12,277 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:12,278 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-03 18:00:12,279 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-03 18:00:12,282 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:12,283 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-03 18:00:12,284 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-03 18:00:12,285 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-03 18:00:12,285 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:45:12,577 - db_logger - INFO - Database connection established successfully.
+2025-01-06 09:45:12,598 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:45:12,598 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-06 09:45:12,599 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:45:12,599 - db_logger - INFO - Fetched Data:[]
+2025-01-06 09:45:12,601 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-06 09:45:12,602 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-06 09:45:12,602 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-06 09:45:12,603 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-06 09:45:12,605 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 09:45:12,607 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 09:45:12,608 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-06 09:45:12,608 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:45:12,609 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:45:12,609 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:45:12,610 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:45:12,613 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 09:45:12,614 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:45:12,615 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:45:12,616 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:45:12,617 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:45:12,618 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:47:22,978 - db_logger - INFO - Database connection established successfully.
+2025-01-06 09:47:22,987 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:47:22,987 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-06 09:47:22,988 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:47:22,989 - db_logger - INFO - Fetched Data:[]
+2025-01-06 09:47:22,990 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:47:22,990 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:47:22,991 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:47:22,991 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:47:22,992 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 336.71492006534123)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 09:47:22,993 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 09:47:22,994 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-06 09:47:22,995 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:47:22,995 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:47:22,995 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:47:22,996 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:47:22,997 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 09:47:22,998 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:47:22,999 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:47:23,000 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:47:23,000 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:47:23,001 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:50:11,692 - db_logger - INFO - Database connection established successfully.
+2025-01-06 09:50:11,699 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:50:11,700 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 19, 45), 62.448612874128514)]
+2025-01-06 09:50:11,700 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 19:45:00+00:00'
+2025-01-06 09:50:11,701 - db_logger - INFO - Fetched Data:[]
+2025-01-06 09:50:11,702 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-06 09:50:11,702 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-06 09:50:11,703 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 19:45:00+00:00'
+            ORDER BY dateTime ASC
+        
+2025-01-06 09:50:11,703 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127)]
+2025-01-06 09:50:11,704 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 19:45:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 09:50:11,707 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 09:50:11,707 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),)]
+2025-01-06 09:50:11,708 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:11,708 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:50:11,709 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:11,709 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:50:11,710 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 09:50:11,712 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:11,712 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:50:11,712 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:11,713 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:50:11,714 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:50:28,268 - db_logger - INFO - Database connection established successfully.
+2025-01-06 09:50:28,274 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 09:50:28,275 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 21, 15), 62.448612874128514)]
+2025-01-06 09:50:28,276 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 09:50:28,276 - db_logger - INFO - Fetched Data:[]
+2025-01-06 09:50:28,277 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:50:28,277 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:50:28,278 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:50:28,279 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:50:28,280 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 21:15:00+00:00', 336.71492006534123)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 09:50:28,282 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 09:50:28,283 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),), (datetime.datetime(2025, 1, 2, 21, 15),)]
+2025-01-06 09:50:28,284 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,284 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:50:28,286 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,287 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:50:28,287 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 09:50:28,289 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,291 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:50:28,292 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,292 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:50:28,293 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:50:28,294 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,295 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:50:28,296 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:50:28,296 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:50:28,297 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 03:00:00'
+            
+2025-01-06 09:51:22,365 - db_logger - INFO - Database connection established successfully.
+2025-01-06 09:51:22,373 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 09:51:22,373 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 21, 15), 62.448612874128514)]
+2025-01-06 09:51:22,374 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 09:51:22,374 - db_logger - INFO - Fetched Data:[]
+2025-01-06 09:51:22,375 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:51:22,376 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 55), 327.85091081389976), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:51:22,377 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 09:51:22,377 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 55), 327.85091081389976), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 09:51:22,379 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 21:15:00+00:00', 336.71492006534123)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 09:51:22,381 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 09:51:22,381 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),), (datetime.datetime(2025, 1, 2, 21, 15),)]
+2025-01-06 09:51:22,382 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,383 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:51:22,384 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,385 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:51:22,386 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 09:51:22,388 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,389 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:51:22,390 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,391 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:51:22,392 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 09:51:22,394 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,394 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 09:51:22,396 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 09:51:22,397 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 09:51:22,398 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 03:00:00'
+            
+2025-01-06 10:13:55,807 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:13:55,811 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 10:13:55,811 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 21, 15), 62.448612874128514)]
+2025-01-06 10:13:55,813 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 21:15:00+00:00'
+2025-01-06 10:13:55,813 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:13:55,815 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:13:55,815 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 55), 327.85091081389976), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 10:13:55,816 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 21:15:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:13:55,817 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 15), 274.2663071912127), (datetime.datetime(2025, 1, 2, 18, 5), 274.2663071912127), (datetime.datetime(2025, 1, 2, 17, 45), 190.24639770772515), (datetime.datetime(2025, 1, 2, 16, 55), 327.85091081389976), (datetime.datetime(2025, 1, 2, 16, 45), 190.24639770772515)]
+2025-01-06 10:13:55,821 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 21:15:00+00:00', 336.71492006534123)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:13:55,823 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:13:55,823 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),), (datetime.datetime(2025, 1, 2, 19, 45),), (datetime.datetime(2025, 1, 2, 21, 15),)]
+2025-01-06 10:13:55,824 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,825 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:13:55,825 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,827 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 10:13:55,827 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 10:13:55,829 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,830 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:13:55,831 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 01:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,831 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 10:13:55,832 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 01:30:00'
+            
+2025-01-06 10:13:55,833 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,834 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:13:55,834 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 03:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:13:55,835 - db_logger - INFO - Fetched Data:[(274.2663071912127,)]
+2025-01-06 10:13:55,835 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 336.71492006534123
+                WHERE dateTime = '2025-01-03 03:00:00'
+            
+2025-01-06 10:15:36,998 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:15:37,024 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-06 10:15:37,025 - db_logger - INFO - Database connection closed.
+2025-01-06 10:15:51,061 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:15:51,065 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-06 10:15:51,065 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:15:51,067 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 18:45:00+00:00'
+2025-01-06 10:15:51,068 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:15:51,072 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 18:45:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:15:51,074 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:15:51,074 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-06 10:15:51,075 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:15:51,076 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:15:51,077 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-03 00:30:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:15:51,078 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:15:51,079 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 0
+                WHERE dateTime = '2025-01-03 00:30:00'
+            
+2025-01-06 10:17:52,307 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:17:52,317 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:17:52,318 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:17:52,318 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:17:52,318 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:17:52,319 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:17:52,320 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:17:52,320 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:17:52,321 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:17:52,322 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:17:52,323 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:17:52,323 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),), (datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-06 10:17:52,324 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:17:52,325 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:17:52,325 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:17:52,326 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:17:52,327 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-06 10:17:52,327 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 18:45:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:17:52,328 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:17:52,328 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 18:45:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:17:52,329 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:17:52,330 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-02 18:45:00'
+            
+2025-01-06 10:20:11,053 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:20:11,059 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:20:11,060 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:20:11,061 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:20:11,061 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:20:11,062 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:20:11,063 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:20:11,063 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:20:11,064 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:20:11,066 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:20:11,069 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:20:11,070 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),), (datetime.datetime(2025, 1, 2, 18, 45),)]
+2025-01-06 10:20:11,071 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:20:11,071 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:20:11,072 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:20:11,073 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:20:11,074 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-06 10:20:11,075 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 18:45:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:20:11,075 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:20:11,076 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 18:45:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:20:11,077 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:20:11,077 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 252.69501058185367
+                WHERE dateTime = '2025-01-02 18:45:00'
+            
+2025-01-06 10:21:57,143 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:21:57,148 - db_logger - ERROR - Error fetching data for query 'SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'': relation "forecast_galchi_to_siurenitar" does not exist
+LINE 1: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime =...
+                      ^
+
+2025-01-06 10:21:57,148 - db_logger - ERROR - Error fetching data for query 'SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-06 10:21:57,149 - db_logger - ERROR - Error executing query '
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 0)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            ': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-06 10:21:57,150 - db_logger - ERROR - Error fetching data for query 'SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC': current transaction is aborted, commands ignored until end of transaction block
+
+2025-01-06 10:22:35,391 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:22:35,404 - db_logger - INFO - Query executed successfully: 
+    CREATE TABLE IF NOT EXISTS public.Forecast_Galchi_To_Siurenitar (
+    dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+    discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Budhi_At_Khari_To_Siurenitar (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+    CREATE TABLE IF NOT EXISTS public.Forecast_Siurenitar_Data (
+        dateTime TIMESTAMP WITHOUT TIME ZONE UNIQUE,
+        discharge FLOAT
+    );
+
+
+2025-01-06 10:22:35,406 - db_logger - INFO - Database connection closed.
+2025-01-06 10:22:39,216 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:22:39,225 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:22:39,225 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:22:39,227 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:22:39,227 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:22:39,228 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:22:39,229 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:22:39,229 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:22:39,230 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:22:39,232 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:22:39,233 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:22:39,233 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-06 10:22:39,234 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:22:39,235 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:22:39,235 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:22:39,236 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:23:54,033 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:23:54,039 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:23:54,039 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:23:54,040 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:23:54,040 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:23:54,041 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:23:54,041 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 12, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:23:54,042 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:23:54,042 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 12, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515)]
+2025-01-06 10:23:54,043 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:23:54,044 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:23:54,046 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-06 10:23:54,046 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:23:54,047 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:23:54,048 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:23:54,049 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:26:35,938 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:26:35,944 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:26:35,944 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:26:35,945 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:26:35,945 - db_logger - INFO - Fetched Data:[]
+2025-01-06 10:26:35,946 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:26:35,946 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 12, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 10, 20), 274.2663071912127)]
+2025-01-06 10:26:35,946 - db_logger - INFO - Data fetched successfully for query: 
+            SELECT dateTime, discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+            WHERE dateTime <= '2025-01-02 13:00:00+00:00'
+            ORDER BY dateTime DESC
+        
+2025-01-06 10:26:35,947 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 12, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 11, 0), 190.24639770772515), (datetime.datetime(2025, 1, 2, 10, 20), 274.2663071912127)]
+2025-01-06 10:26:35,948 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 252.69501058185367)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:26:35,950 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:26:35,950 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-06 10:26:35,951 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:26:35,951 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:26:35,952 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:26:35,953 - db_logger - INFO - Fetched Data:[(190.24639770772515,)]
+2025-01-06 10:28:43,758 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:28:43,766 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:28:43,766 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:28:43,767 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:28:43,767 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 61.01022194439104)]
+2025-01-06 10:28:43,768 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 123.45883481851956)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:28:43,771 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:28:43,771 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-06 10:28:43,772 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:28:43,773 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:28:43,774 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:28:43,774 - db_logger - INFO - Fetched Data:[(61.01022194439104,)]
+2025-01-06 10:28:43,776 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 123.45883481851956
+                WHERE dateTime = '2025-01-02 13:00:00'
+            
+2025-01-06 10:30:11,112 - db_logger - INFO - Database connection established successfully.
+2025-01-06 10:30:11,119 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Galchi_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:30:11,120 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 62.448612874128514)]
+2025-01-06 10:30:11,121 - db_logger - INFO - Data fetched successfully for query: SELECT * FROM Forecast_Budhi_At_Khari_To_Siurenitar WHERE dateTime = '2025-01-02 13:00:00+00:00'
+2025-01-06 10:30:11,121 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0), 61.01022194439104)]
+2025-01-06 10:30:11,123 - db_logger - INFO - Query executed successfully: 
+            INSERT INTO Forecast_Siurenitar_Data (dateTime, discharge) 
+            VALUES ('2025-01-02 13:00:00+00:00', 123.45883481851956)
+            ON CONFLICT (dateTime)
+            DO UPDATE SET discharge = EXCLUDED.discharge
+            
+2025-01-06 10:30:11,125 - db_logger - INFO - Data fetched successfully for query: SELECT dateTime FROM Forecast_Siurenitar_Data ORDER BY dateTime ASC
+2025-01-06 10:30:11,126 - db_logger - INFO - Fetched Data:[(datetime.datetime(2025, 1, 2, 13, 0),)]
+2025-01-06 10:30:11,126 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Galchi_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:30:11,126 - db_logger - INFO - Fetched Data:[(62.448612874128514,)]
+2025-01-06 10:30:11,127 - db_logger - INFO - Data fetched successfully for query: 
+                SELECT discharge FROM Forecast_Budhi_At_Khari_To_Siurenitar
+                WHERE dateTime <= '2025-01-02 13:00:00'
+                ORDER BY dateTime DESC LIMIT 1
+            
+2025-01-06 10:30:11,128 - db_logger - INFO - Fetched Data:[(61.01022194439104,)]
+2025-01-06 10:30:11,129 - db_logger - INFO - Query executed successfully: 
+                UPDATE Forecast_Siurenitar_Data
+                SET discharge = 123.45883481851956
+                WHERE dateTime = '2025-01-02 13:00:00'
+            

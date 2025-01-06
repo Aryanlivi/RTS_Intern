@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from .Loggers import *
 import numpy as np
+from datetime import datetime
 
 load_dotenv()
 
@@ -72,8 +73,14 @@ class Database:
             if not self.cursor:
                 self.cursor = self.connection.cursor()
             df.reset_index(inplace=True)
-            data_tuple = tuple(float(value) if isinstance(value, np.float64) else value for value in df.iloc[0])
-            print(data_tuple)
+
+            data_tuple = tuple(
+            value.replace(tzinfo=None) if isinstance(value, datetime) else
+            float(value) if isinstance(value, np.float64) else
+            value
+            for value in df.iloc[0]
+            )
+            # data_tuple = tuple(float(value) if isinstance(value, np.float64) else value for value in df.iloc[0])
 
             # Create an insert query based on DataFrame columns
             columns = ', '.join(df.columns)
@@ -83,7 +90,7 @@ class Database:
             # Use execute to insert a single row
             self.cursor.execute(query, data_tuple)
             self.connection.commit()
-            print(f"Data inserted into {table_name} successfully.")
+            # print(f"Data inserted into {table_name} successfully.")
         except Exception as e:
             print(f"Error inserting data into {table_name}: {e}")
             self.connection.rollback()
