@@ -80,17 +80,14 @@ class Database:
             value
             for value in df.iloc[0]
             )
-            # data_tuple = tuple(float(value) if isinstance(value, np.float64) else value for value in df.iloc[0])
 
-            # Create an insert query based on DataFrame columns
+
             columns = ', '.join(df.columns)
             values_placeholder = ', '.join(['%s'] * len(df.columns))
             query = f"INSERT INTO {table_name} ({columns}) VALUES ({values_placeholder})"
 
-            # Use execute to insert a single row
             self.cursor.execute(query, data_tuple)
             self.connection.commit()
-            # print(f"Data inserted into {table_name} successfully.")
         except Exception as e:
             print(f"Error inserting data into {table_name}: {e}")
             self.connection.rollback()

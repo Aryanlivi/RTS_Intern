@@ -117,9 +117,9 @@ def recalculate_suirenitar_table(db, galchi_table, budhi_table, siurenitar_table
                 WHERE dateTime = '{suirenitar_time}'
             """
             db.execute_query(update_query)
-            print(f"Updated {siurenitar_table}: dateTime={suirenitar_time}, discharge={total_discharge}")
-
-        print(f"Recalculated all rows in {siurenitar_table}.")
+            # print(f"Updated {siurenitar_table}: dateTime={suirenitar_time}, discharge={total_discharge}")
+            return True
+        # print(f"Recalculated all rows in {siurenitar_table}.")
 
     except Exception as e:
         print(f"Error recalculating {siurenitar_table}: {e}")

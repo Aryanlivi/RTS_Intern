@@ -7,7 +7,6 @@ from Socket.ApiService import APIService
 from ComputeForecast import compute_discharge_and_forecast
 from dotenv import load_dotenv
 import os 
-# from DB_Service.Database import Database
 
 load_dotenv()
 
@@ -39,10 +38,6 @@ def compute_and_post(data):
     galchi_data=standardize_river_data(data=data,id=SocketGalchiId)
     budhi_data=standardize_river_data(data=data,id=SocketBudhiId)
 
-    
-    # galchi_data={'datetime': '2025-01-02T06:35:00+00:00', 'value': 366.036499023} //For Tests
-    # budhi_data={'datetime': '2025-01-02T06:45:00+00:00', 'value': 333.405014648} //For Tests
-
     galchi_df=pd.DataFrame([galchi_data])
     budhi_df=pd.DataFrame([budhi_data])
 
@@ -51,5 +46,5 @@ def compute_and_post(data):
     final_output=compute_discharge_and_forecast(galchi_df,budhi_df)
     api_service=APIService()
     api_service.post_forecast(final_output)
-    print("------Updated DF----------")
+    print("------################################----------")
     

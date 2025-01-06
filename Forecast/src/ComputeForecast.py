@@ -85,9 +85,9 @@ def get_merged_df(shifted_galchi_df,shifted_budhi_df):
 
 
 
-def get_latest_suirenitar_data(db, SIURENITAR_TABLE, latest_datetime):
+def get_suirenitar_data(db, SIURENITAR_TABLE):
     try:
-        query = f"SELECT * FROM {SIURENITAR_TABLE} WHERE dateTime = '{latest_datetime}'"
+        query = f"SELECT * FROM {SIURENITAR_TABLE}"
         result = db.fetch(query)
         
         if result:
@@ -125,96 +125,54 @@ def compute_discharge_and_forecast(galchi_df,budhi_df):
     db.insert_df(shifted_budhi_df,BUDHI_TABLE)
     latest_dateTime=get_latest_dateTime(shifted_galchi_df,shifted_budhi_df)
     insert_suirenitar_table(db,latest_dateTime,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
-    recalculate_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
-    return None
-    # # Update the Suirenitar table and get the latest data
-    # try:
-    #     is_updated, latest_dateTime = update_suirenitar_table(db, GALCHI_TABLE, BUDHI_TABLE, SIURENITAR_TABLE)
-    # except Exception as e:
-    #     print(f"Error updating Suirenitar table: {e}")
-    #     return None
+    is_recalculated=recalculate_suirenitar_table(db,GALCHI_TABLE,BUDHI_TABLE,SIURENITAR_TABLE)
 
-    # json_output = [{}]
-    # if is_updated:
-    #     try:
-    #         output = get_latest_suirenitar_data(db, SIURENITAR_TABLE, latest_dateTime)
-    #         json_output = json.loads(output)
-    #     except json.JSONDecodeError as e:
-    #         print(f"Error decoding JSON output: {e}")
-    #         return None
-    #     except Exception as e:
-    #         print(f"Error fetching latest Suirenitar data: {e}")
-    #         return None
+    json_output = [{}]
+    if is_recalculated:
+        try:
+            output = get_suirenitar_data(db, SIURENITAR_TABLE)
+            json_output = json.loads(output)
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON output: {e}")
+            return None
+        except Exception as e:
+            print(f"Error fetching latest Suirenitar data: {e}")
+            return None
 
-    # # Process the data into a DataFrame
-    # try:
-    #     computed_suirenitar_df = pd.DataFrame(json_output)
-    #     if computed_suirenitar_df.empty:
-    #         print("No data available to process.")
-    #         return None
+    # Process the data into a DataFrame
+    try:
+        computed_suirenitar_df = pd.DataFrame(json_output)
+        if computed_suirenitar_df.empty:
+            print("No data available to process.")
+            return None
         
-    #     # Rename columns
-    #     computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
+        # Rename columns
+        computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
 
-    #     # Convert 'time' to datetime
-    #     computed_suirenitar_df['time'] = pd.to_datetime(computed_suirenitar_df['time'], errors='coerce')
+        # Convert 'time' to datetime
+        computed_suirenitar_df['time'] = pd.to_datetime(computed_suirenitar_df['time'], errors='coerce')
         
-    #     # Handle invalid datetime conversion
-    #     if computed_suirenitar_df['time'].isnull().any():
-    #         print("Invalid datetime values detected.")
-    #         return None
+        # Handle invalid datetime conversion
+        if computed_suirenitar_df['time'].isnull().any():
+            print("Invalid datetime values detected.")
+            return None
 
-    #     # Convert to Nepali Time (+5:45)
-    #     nepali_offset = pd.Timedelta(hours=5, minutes=45)
-    #     computed_suirenitar_df['time'] = computed_suirenitar_df['time'] + nepali_offset
+        # Convert to Nepali Time (+5:45)
+        nepali_offset = pd.Timedelta(hours=5, minutes=45)
+        computed_suirenitar_df['time'] = computed_suirenitar_df['time'] + nepali_offset
 
-    #     # Format 'time' column to ISO format
-    #     computed_suirenitar_df['time'] = computed_suirenitar_df['time'].dt.strftime('%Y-%m-%dT%H:%M')
+        # Format 'time' column to ISO format
+        computed_suirenitar_df['time'] = computed_suirenitar_df['time'].dt.strftime('%Y-%m-%dT%H:%M')
 
-    #     # Convert DataFrame to JSON
-    #     output = computed_suirenitar_df.to_json(orient='records', date_format='iso')
-    #     result = json.loads(output)
-    #     print(result)
-    #     print(type(result))
-    #     return result
+        # Convert DataFrame to JSON
+        output = computed_suirenitar_df.to_json(orient='records', date_format='iso')
+        result = json.loads(output)
+        print(result)
+        print(type(result))
+        return result
 
-    # except Exception as e:
-    #     print(f"Error processing data: {e}")
-    #     return None
+    except Exception as e:
+        print(f"Error processing data: {e}")
+        return None
     
-    
-    # json_output=[{}]
-    # if is_updated:
-    #     output=get_latest_suirenitar_data(db,SIURENITAR_TABLE,latest_dateTime)
-    #     json_output = json.loads(output)
-    #     print(type(json_output))
-    #     print(json_output)
-
-    # computed_suirenitar_df=pd.DataFrame(json_output)
-    # # print(computed_suirenitar_df)
-    
-    # # Rename columns first
-    # computed_suirenitar_df = computed_suirenitar_df.rename(columns={'dateTime': 'time', 'discharge': 'value'})
-
-    # # Convert 'time' column to datetime
-    # computed_suirenitar_df['time'] = pd.to_datetime(computed_suirenitar_df['time'])
-
-    # # Convert to Nepali Time +5:45
-    # computed_suirenitar_df['time'] = computed_suirenitar_df['time'] + pd.Timedelta(hours=5, minutes=45)
-
-    # # Format the 'time' column to show only hour and minute
-    # computed_suirenitar_df['time'] = computed_suirenitar_df['time'].dt.strftime('%Y-%m-%dT%H:%M')
-    
-    # try:
-    #     output = computed_suirenitar_df.to_json(orient='records', date_format='iso')
-    #     result = json.loads(output)
-    #     return result
-    # except Exception as e:
-    #     print(f"Error during JSON conversion: {e}")
-    #     return None
-
-        
-    # computed_suirenitar_df=merged_df[['dateTime','discharge']]
-    
-    # 
             
